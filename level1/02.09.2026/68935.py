@@ -8,5 +8,8 @@ n은 1 이상 100,000,000 이하인 자연수입니다.
 """
 
 def solution(n):
-    answer = 0
-    return answer
+    base_3 = ""
+    while(n > 0):
+        n,a = divmod(n, 3)
+        base_3 += str(a)
+    return int(base_3, 3)
